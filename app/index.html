@@ -6,10 +6,19 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
 </head>
-<body>
+<body ng-controller="myAppCtrl">
 
-  <p>Nothing here {{'yet' + '!'}}</p>
+  
+  <ul>
+    <p>{{topic.title}}</p>
+    <p ng-repeat="option in topic.options">
+      <input type="checkbox">{{option.option}}
+    </p>
+    <input type="submit" value="提交">
+  </ul>
 
 </body>
 </html>
+ 
